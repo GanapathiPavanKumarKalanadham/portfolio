@@ -6,7 +6,7 @@ import { OrbitControls } from '@react-three/drei';
 import TechGlobe from './TechGlobe';
 import { useTheme } from '../context/ThemeContext';
 
-const AboutSection = forwardRef<HTMLElement>((props, ref) => {
+const AboutSection = forwardRef<HTMLElement>((_, ref) => {
   const { isDark } = useTheme();
 
   const highlights = [
@@ -100,10 +100,8 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
             className="relative"
           >
             <div className="relative w-[600px] h-[800px] mx-auto">
-              <motion.div
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-              >
-                <div className="w-80 h-[450px] rounded-3xl bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-2">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-80 h-[450px] rounded-3xl overflow-hidden flex items-center justify-center mx-auto">
                   <div className={`w-full h-full rounded-3xl flex items-center justify-center overflow-hidden ${
                     isDark ? 'bg-slate-800' : 'bg-white'
                   }`}>
@@ -119,7 +117,7 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
                     />
                   </div>
                 </div>
-              </motion.div>
+              </div>
               {/* Enhanced 3D Tech Globe with Real Logos */}
               <div className="absolute inset-0">
                 <Canvas camera={{ position: [0, 0, 10], fov: 75 }}>

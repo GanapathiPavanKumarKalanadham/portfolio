@@ -11,10 +11,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ onComplete }) => {
   const [showTransition, setShowTransition] = useState(false);
 
   useEffect(() => {
-    // Auto-search after 2 seconds
+    // Remove auto-search and redirect logic
     const timer = setTimeout(() => {
-      const linkedinUrl = `https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent('Ganapathi Pavan Kumar Kalanadham')}`;
-      window.open(linkedinUrl, '_blank');
       setSearchComplete(true);
     }, 2000);
 
@@ -83,7 +81,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onComplete }) => {
         >
           Finding
           <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            {" "}Ganapathi Pavan Kumar
+            {" "}Ganapathi Pavan Kumar kalanadham
           </span>
         </motion.h1>
 
@@ -111,7 +109,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onComplete }) => {
           >
             <div className="flex items-center justify-center space-x-2 text-green-400">
               <ExternalLink size={20} />
-              <span>LinkedIn search opened in new tab</span>
             </div>
             <p className="text-blue-200">Redirecting to portfolio...</p>
           </motion.div>

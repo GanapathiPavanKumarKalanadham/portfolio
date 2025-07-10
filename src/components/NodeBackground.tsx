@@ -32,7 +32,7 @@ const NodeBackground: React.FC = () => {
     };
 
     const createNodes = () => {
-      const nodeCount = Math.floor((window.innerWidth * window.innerHeight) / 6000); // More nodes
+      const nodeCount = Math.floor((window.innerWidth * window.innerHeight) / 8000); // Fewer nodes for mobile performance
       nodesRef.current = [];
 
       for (let i = 0; i < nodeCount; i++) {
@@ -78,11 +78,12 @@ const NodeBackground: React.FC = () => {
           node.vy += Math.sin(angle) * force * 0.02;
         }
         
-        // Apply velocity with damping
-        node.x += node.vx;
-        node.y += node.vy;
-        node.vx *= 0.99; // Damping
-        node.vy *= 0.99;
+        // Add continuous movement
+        node.vx += (Math.random() - 0.5) * 0.01;
+        node.vy += (Math.random() - 0.5) * 0.01;
+        // Apply velocity with less damping for continuous movement
+        node.vx *= 0.995; // Less damping
+        node.vy *= 0.995;
 
         // Boundary collision with bounce
         if (node.x < 0 || node.x > canvas.width) {

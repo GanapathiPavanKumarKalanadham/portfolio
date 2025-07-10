@@ -83,18 +83,20 @@ const SkillsSection = forwardRef<HTMLElement>((props, ref) => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               whileHover={{ 
-                scale: 1.15,
-                rotateY: 360,
+                scale: 1.1,
+                rotateY: 15,
                 z: 50,
-                transition: { duration: 0.4 }
+                transition: { duration: 0.2 }
               }}
               onHoverStart={() => setHoveredSkill(index)}
               onHoverEnd={() => setHoveredSkill(null)}
-              className="group relative cursor-pointer transform-gpu"
+              className="group relative cursor-pointer"
               style={{ 
                 transformStyle: 'preserve-3d',
                 perspective: '1000px'
               }}
+              layoutId={`skill-card-${index}`}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <div className={`relative overflow-hidden rounded-xl p-3 h-24 transition-all duration-300 ${
                 isDark 
@@ -113,6 +115,7 @@ const SkillsSection = forwardRef<HTMLElement>((props, ref) => {
                   }}
                   transition={{ duration: 0.4 }}
                   className="flex justify-center mb-1 relative z-10"
+                  layoutId={`skill-icon-${index}`}
                 >
                   <div className={`p-1.5 rounded-lg bg-gradient-to-br ${skill.color} shadow-lg`}>
                     <skill.icon size={16} className="text-white" />
@@ -134,6 +137,7 @@ const SkillsSection = forwardRef<HTMLElement>((props, ref) => {
                   }}
                   transition={{ duration: 0.2 }}
                   className="relative z-10"
+                  layoutId={`skill-bar-${index}`}
                 >
                   <div className={`w-full rounded-full h-1 mb-1 ${
                     isDark ? 'bg-gray-700' : 'bg-gray-200'
@@ -143,6 +147,7 @@ const SkillsSection = forwardRef<HTMLElement>((props, ref) => {
                       animate={{ width: hoveredSkill === index ? `${skill.level}%` : 0 }}
                       transition={{ duration: 0.5, delay: 0.1 }}
                       className={`h-1 rounded-full bg-gradient-to-r ${skill.color}`}
+                      layoutId={`skill-bar-inner-${index}`}
                     />
                   </div>
                   <p className={`text-xs text-center ${
@@ -173,6 +178,7 @@ const SkillsSection = forwardRef<HTMLElement>((props, ref) => {
                           repeatType: 'loop'
                         }
                       }}
+                      layoutId={`skill-particle-${index}-${i}`}
                     />
                   ))}
                 </div>

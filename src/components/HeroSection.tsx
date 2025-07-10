@@ -117,41 +117,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onAboutClick }) => {
           </motion.div>
         </motion.div>
 
-        {/* Right Content - Enhanced 3D Profile with Tech Globe */}
+        {/* Right Content - Simple Profile Image */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="relative flex justify-center"
         >
-          <div className="relative w-80 h-[450px]">
-            {/* Enhanced Profile Image with Multiple Glow Effects - 9:16 Ratio */}
-            <motion.div
-              animate={{ 
-                boxShadow: [
-                  "0 0 60px rgba(139, 92, 246, 1), 0 0 120px rgba(59, 130, 246, 0.8), 0 0 180px rgba(236, 72, 153, 0.6)",
-                  "0 0 70px rgba(59, 130, 246, 1), 0 0 130px rgba(236, 72, 153, 0.8), 0 0 190px rgba(139, 92, 246, 0.6)",
-                  "0 0 60px rgba(236, 72, 153, 1), 0 0 120px rgba(139, 92, 246, 0.8), 0 0 180px rgba(59, 130, 246, 0.6)",
-                  "0 0 60px rgba(139, 92, 246, 1), 0 0 120px rgba(59, 130, 246, 0.8), 0 0 180px rgba(236, 72, 153, 0.6)"
-                ]
+          <div className="relative w-80 h-[450px] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center">
+            <motion.img
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              src="/certifications/me.jpg"
+              alt="Ganapathi Pavan Kumar Kalanadham"
+              className="w-full h-full rounded-3xl object-cover"
+              onError={(e) => {
+                e.currentTarget.src = "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400";
               }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-            >
-              <div className="w-80 h-[450px] rounded-3xl bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-2">
-                <div className={`w-full h-full rounded-3xl flex items-center justify-center overflow-hidden ${
-                  isDark ? 'bg-slate-800' : 'bg-white'
-                }`}>
-                  <motion.img
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    src="/certifications/me.jpg"
-                    alt="Ganapathi Pavan Kumar Kalanadham"
-                    className="w-full h-full rounded-3xl object-cover"
-                  />
-                </div>
-              </div>
-            </motion.div>
+            />
           </div>
         </motion.div>
       </div>

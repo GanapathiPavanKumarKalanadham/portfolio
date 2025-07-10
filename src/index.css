@@ -1,3 +1,78 @@
+/* Mobile scrolling and smoothing */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  animation: gradientMove 20s ease-in-out infinite;
+}
+
+/* Lightning Animation Keyframes */
+@keyframes lightning-flash {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes electric-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px currentColor;
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+    transform: scale(1.1);
+  }
+}
+
+/* Sparkling Effect */
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0) rotate(0deg);
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+/* Lightning Bolt Effect */
+.lightning-bolt {
+  animation: lightning-flash 0.3s ease-in-out infinite;
+}
+
+.electric-glow {
+  animation: electric-pulse 2s ease-in-out infinite;
+}
+
+.sparkle-particle {
+  animation: sparkle 2s ease-in-out infinite;
+}
