@@ -74,7 +74,7 @@ const AboutSection = forwardRef<HTMLElement>((_, ref) => {
                 isDark ? 'text-gray-300' : 'text-gray-600'
               }`}>
                 <p>
-                  Hello! I'm Ganapathi Pavan Kumar Kalanadham, a passionate fresher Full-Stack Developer from Hyderabad, India. 
+                  Hello! I'm Ganapathi Pavan Kumar Kalanadham, a passionate fresher Full-Stack Developer from Rajahmundry, India. 
                   My journey into programming began during my computer science studies, where I discovered my love 
                   for creating digital solutions and solving complex problems through code.
                 </p>
