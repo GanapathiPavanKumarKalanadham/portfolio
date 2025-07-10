@@ -502,10 +502,11 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
                       <span>View</span>
                     </button>
                     <a
-                      href={cert.verificationUrl && cert.verificationUrl !== 'N/A' ? cert.verificationUrl : undefined}
+                      href={cert.verificationUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center space-x-1 text-green-500 hover:text-green-400 transition-colors text-sm ${(!cert.verificationUrl || cert.verificationUrl === 'N/A') ? 'opacity-50 pointer-events-none cursor-not-allowed' : ''}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center space-x-1 text-green-500 hover:text-green-400 transition-colors text-sm"
                     >
                       <span>Verify</span>
                       <ExternalLink size={12} />
@@ -570,10 +571,11 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
                           <span>View</span>
                         </button>
                         <a
-                          href={cert.verificationUrl && cert.verificationUrl !== 'N/A' ? cert.verificationUrl : undefined}
+                          href={cert.verificationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`flex items-center space-x-1 text-green-500 hover:text-green-400 transition-colors ${(!cert.verificationUrl || cert.verificationUrl === 'N/A') ? 'opacity-50 pointer-events-none cursor-not-allowed' : ''}`}
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex items-center space-x-1 text-green-500 hover:text-green-400 transition-colors"
                         >
                           <span>Verify</span>
                           <ExternalLink size={12} />
@@ -763,17 +765,10 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
                       <span>Download Certificate</span>
                     </a>
                     <a
-                      href={selectedCertData.verificationUrl && selectedCertData.verificationUrl !== 'N/A' ? selectedCertData.verificationUrl : undefined}
+                      href={selectedCertData.verificationUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={e => {
-                        if (!selectedCertData.verificationUrl || selectedCertData.verificationUrl === 'N/A') {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          return false;
-                        }
-                      }}
-                      className={`flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors ${(!selectedCertData.verificationUrl || selectedCertData.verificationUrl === 'N/A') ? 'opacity-50 pointer-events-none cursor-not-allowed' : ''}`}
+                      className="flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
                     >
                       <CheckCircle size={20} />
                       <span>Verify Credential</span>
