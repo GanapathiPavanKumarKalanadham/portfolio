@@ -319,7 +319,26 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
             "examScore": "N/A",
             "issuedBy": "IBM",
             "credentialType": "Course Certificate"
+          },
+          {
+            "id": 19,
+            "title": "AI Azure Internship",
+            "issuer": "Microsoft (via Edunet Foundation)",
+            "issuedBy": "Edunet Foundation in collaboration with AICTE",
+            "date": "May 13, 2025",
+            "validUntil": "June 13, 2025",
+            "credentialId": "INTERNSHIP_174365314467ee0918e7994",
+            "description": "4-week internship focused on artificial intelligence using Microsoft Azure tools and technologies.",
+            "detailedDescription": "Successfully completed a 4-week AI Azure internship from May 13, 2025 to June 13, 2025. Conducted under a Microsoft initiative and facilitated by Edunet Foundation in collaboration with AICTE. Gained practical knowledge in cloud-based AI development, responsible AI practices, and hands-on implementation using Microsoft Azure services.",
+            "skills": ["Artificial Intelligence", "Microsoft Azure", "Cloud Services", "AI Ethics", "Hands-on Labs"],
+            "verificationUrl": "",
+            "certificateUrl": "/certifications/Ms_internship.pdf",
+            "logo": "https://cdn-icons-png.flaticon.com/512/732/732221.png",
+            "featured": true,
+            "examScore": null,
+            "credentialType": "Internship Certificate"
           }
+          
   ];
 
   const featuredCertifications = certifications.filter(cert => cert.featured);
