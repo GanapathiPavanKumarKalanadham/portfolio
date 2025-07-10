@@ -331,7 +331,6 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
             "description": "4-week internship focused on artificial intelligence using Microsoft Azure tools and technologies.",
             "detailedDescription": "Successfully completed a 4-week AI Azure internship from May 13, 2025 to June 13, 2025. Conducted under a Microsoft initiative and facilitated by Edunet Foundation in collaboration with AICTE. Gained practical knowledge in cloud-based AI development, responsible AI practices, and hands-on implementation using Microsoft Azure services.",
             "skills": ["Artificial Intelligence", "Microsoft Azure", "Cloud Services", "AI Ethics", "Hands-on Labs"],
-            "verificationUrl": "",
             "certificateUrl": "/certifications/Ms_internship.pdf",
             "logo": "https://cdn-icons-png.flaticon.com/512/732/732221.png",
             "featured": true,
@@ -503,11 +502,10 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
                       <span>View</span>
                     </button>
                     <a
-                      href={cert.verificationUrl}
+                      href={cert.verificationUrl && cert.verificationUrl !== 'N/A' ? cert.verificationUrl : undefined}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="flex items-center space-x-1 text-green-500 hover:text-green-400 transition-colors text-sm"
+                      className={`flex items-center space-x-1 text-green-500 hover:text-green-400 transition-colors text-sm ${(!cert.verificationUrl || cert.verificationUrl === 'N/A') ? 'opacity-50 pointer-events-none cursor-not-allowed' : ''}`}
                     >
                       <span>Verify</span>
                       <ExternalLink size={12} />
@@ -572,11 +570,10 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
                           <span>View</span>
                         </button>
                         <a
-                          href={cert.verificationUrl}
+                          href={cert.verificationUrl && cert.verificationUrl !== 'N/A' ? cert.verificationUrl : undefined}
                           target="_blank"
                           rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="flex items-center space-x-1 text-green-500 hover:text-green-400 transition-colors"
+                          className={`flex items-center space-x-1 text-green-500 hover:text-green-400 transition-colors ${(!cert.verificationUrl || cert.verificationUrl === 'N/A') ? 'opacity-50 pointer-events-none cursor-not-allowed' : ''}`}
                         >
                           <span>Verify</span>
                           <ExternalLink size={12} />
@@ -766,10 +763,17 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
                       <span>Download Certificate</span>
                     </a>
                     <a
-                      href={selectedCertData.verificationUrl}
+                      href={selectedCertData.verificationUrl && selectedCertData.verificationUrl !== 'N/A' ? selectedCertData.verificationUrl : undefined}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+                      onClick={e => {
+                        if (!selectedCertData.verificationUrl || selectedCertData.verificationUrl === 'N/A') {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          return false;
+                        }
+                      }}
+                      className={`flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors ${(!selectedCertData.verificationUrl || selectedCertData.verificationUrl === 'N/A') ? 'opacity-50 pointer-events-none cursor-not-allowed' : ''}`}
                     >
                       <CheckCircle size={20} />
                       <span>Verify Credential</span>
