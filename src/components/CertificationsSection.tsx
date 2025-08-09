@@ -9,6 +9,40 @@ const CertificationsSection = forwardRef<HTMLElement>((_, ref) => {
 
   const certifications = [
       {
+        "id": 20,
+        "title": "Certified System Administrator",
+        "issuer": "ServiceNow",
+        "date": "August 6, 2025",
+        "credentialId": "27362517",
+        "description": "Professional certification in administering and configuring ServiceNow platforms.",
+        "detailedDescription": "Validates expertise in configuring, managing, and maintaining the ServiceNow platform, including user administration, process automation, and system customization for enterprise workflows.",
+        "skills": ["ServiceNow Administration", "Workflow Automation", "System Configuration"],
+        "certificateUrl": "/certifications/ServiceNowCSA_cerificate.pdf",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7d/ServiceNow_logo.svg",
+        "featured": true,
+        "validUntil": "August 2028",
+        "examScore": "N/A",
+        "issuedBy": "ServiceNow",
+        "credentialType": "Professional Certificate"
+      },
+      {
+        "id": 21,
+        "title": "Cyber Security Internship",
+        "issuer": "Edunet Foundation & AICTE",
+        "date": "June 30, 2025",
+        "credentialId": "STU678a8022c65621737130018",
+        "description": "6-week internship program in Cyber Security covering fundamentals and hands-on applications.",
+        "detailedDescription": "Completed a 6-week internship in Cyber Security, learning about threat detection, network protection, ethical hacking, and incident response strategies. Program implemented by Edunet Foundation in collaboration with AICTE.",
+        "skills": ["Cybersecurity", "Threat Analysis", "Network Security", "Incident Response"],
+        "certificateUrl": "/certifications/cybersecurityIBM.pdf",
+        "logo": "https://images.pexels.com/photos/5380643/pexels-photo-5380643.jpeg?auto=compress&cs=tinysrgb&w=100",
+        "featured": true,
+        "validUntil": "N/A",
+        "examScore": "N/A",
+        "issuedBy": "Edunet Foundation & AICTE",
+        "credentialType": "Internship Certificate"
+      },
+      {
         "id": 1,
         "title": "Programming for Problem Solving Using C",
         "issuer": "CodeTantra",

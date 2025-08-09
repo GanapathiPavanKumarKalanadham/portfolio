@@ -74,19 +74,16 @@ const AboutSection = forwardRef<HTMLElement>((_, ref) => {
                 isDark ? 'text-gray-300' : 'text-gray-600'
               }`}>
                 <p>
-                  Hello! I'm Ganapathi Pavan Kumar Kalanadham, a passionate fresher Full-Stack Developer from Rajahmundry, India. 
-                  My journey into programming began during my computer science studies, where I discovered my love 
-                  for creating digital solutions and solving complex problems through code.
+                I’m Ganapathi Pavan Kumar Kalanadham, a certified Full-Stack Developer and ServiceNow System Administrator from Rajahmundry, India, passionate about building innovative and efficient digital solutions. My journey in technology began during my Computer Science studies, where I discovered my love for solving complex problems and creating impactful applications.
                 </p>
                 <p>
-                  As a recent graduate, I've dedicated myself to mastering modern web technologies including React, 
-                  Node.js, TypeScript, and cloud platforms. I've built several projects that showcase my ability to 
-                  create full-stack applications with clean, maintainable code.
+                I specialize in React, Node.js, TypeScript, PostgreSQL, MongoDB, and cloud platforms such as Azure and Firebase, with experience spanning both frontend and backend development. My skills are backed by multiple certifications, including ServiceNow Administration, Microsoft Azure AI, IBM Cybersecurity, and programming foundations in C, Python, SQL, and Database Management.
                 </p>
                 <p>
-                  I'm excited to start my professional career and contribute to innovative projects. My goal is to 
-                  work with experienced teams where I can learn, grow, and make meaningful contributions to the 
-                  tech industry while building solutions that make a difference.
+                Beyond certifications, I have developed projects in AI, machine learning, process automation, and web application development, applying best practices in performance, scalability, and security. I’m eager to join a collaborative team where I can contribute my skills, learn from industry experts, and help deliver solutions that make a real difference.
+                </p>
+                <p>
+                I’m eager to join a forward-thinking team where I can apply my skills, continue learning from industry experts, and contribute to projects that merge innovation with meaningful outcomes.
                 </p>
               </div>
             </div>

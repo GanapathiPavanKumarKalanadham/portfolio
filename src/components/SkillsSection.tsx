@@ -2,6 +2,7 @@ import React, { forwardRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Code, Database, Globe, Smartphone, Cloud, Palette, Server, Zap } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { Settings } from 'lucide-react';
 
 const SkillsSection = forwardRef<HTMLElement>((props, ref) => {
   const { isDark } = useTheme();
@@ -25,6 +26,7 @@ const SkillsSection = forwardRef<HTMLElement>((props, ref) => {
     { name: 'Express', icon: Server, level: 85, color: 'from-gray-500 to-gray-700' },
     { name: 'Java', icon: Database, level: 70, color: 'from-red-500 to-red-700' },
     { name: 'Django', icon: Database, level: 70, color: 'from-blue-500 to-red-700' },
+    { name: 'ServiceNow', icon: Settings, level: 95, color: 'from-teal-500 to-teal-700'},
   ];
 
   return (
