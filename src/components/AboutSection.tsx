@@ -13,24 +13,25 @@ const AboutSection = forwardRef<HTMLElement>((_, ref) => {
     {
       icon: User,
       title: 'Who I Am',
-      description: 'Passionate fresher Full-Stack Developer with strong foundation in modern web technologies and eagerness to learn.'
+      description: 'Certified Full-Stack Developer & ServiceNow System Administrator from Rajahmundry, India, passionate about creating efficient and innovative digital solutions.'
     },
     {
       icon: Heart,
       title: 'What I Love',
-      description: 'Building responsive applications, learning cutting-edge technologies, and solving complex coding challenges.'
+      description: 'Building impactful web applications, exploring AI & machine learning, and applying best practices in scalability, security, and performance.'
     },
     {
       icon: Target,
       title: 'My Goal',
-      description: 'To contribute to innovative projects while growing as a developer and making a positive impact in the tech industry.'
+      description: 'To join a collaborative, forward-thinking team where I can contribute my expertise, grow alongside industry experts, and deliver meaningful solutions.'
     },
     {
       icon: Zap,
       title: 'My Approach',
-      description: 'Clean code, continuous learning, and collaborative teamwork to deliver high-quality solutions.'
+      description: 'Combining clean code, continuous learning, and cross-disciplinary knowledge to design and implement high-quality, future-ready applications.'
     }
   ];
+  
 
   return (
     <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8">
