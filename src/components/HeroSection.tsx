@@ -50,7 +50,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onAboutClick }) => {
             className={`text-5xl md:text-7xl font-bold mb-6 ${
               isDark ? 'text-white' : 'text-gray-900'
             }`}
-            style={{ fontFamily: 'cursive' }}
+            style={{ fontFamily: 'Poppins' }}
           >
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -66,8 +66,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onAboutClick }) => {
               isDark ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            Passionate fresher Full-Stack Developer eager to create innovative digital experiences 
-            with modern technologies and creative problem-solving skills.
+            Certified Full-Stack Developer and ServiceNow Administrator passionate about 
+            creating innovative, scalable, and efficient digital solutions with modern web technologies.
           </motion.p>
           
           <motion.div
